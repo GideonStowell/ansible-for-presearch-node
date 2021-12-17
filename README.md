@@ -6,7 +6,7 @@ Currently, I can test the playbook with the use of Vagrant. Simply run:
 `vagrant up`
 and the playbook will execute once the vm has been provisioned
 After modifying the playbook further, run:
-`vagrant provoision` 
+`vagrant provision` 
 to rerun the playbook.
 
 # Features
