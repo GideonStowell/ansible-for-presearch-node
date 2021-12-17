@@ -1,0 +1,35 @@
+---
+- hosts: all
+  vars_files: 
+  - vars.yml
+  become: yes
+  tasks:
+    - name: Install docker
+      package: 
+        name:
+        - docker.io
+        - python3-pip 
+        - python3-docker
+        state: present
+
+    - name: Start presearch auto-updater
+      docker_container:
+        image: presearch/auto-updater
+        name: presearch-auto-updater
+        state: started
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+        restart_policy: unless-stopped
+        command: --cleanup --interval 900 presearch-auto-updater presearch-node       
+
+    - name: Start presearch node
+      docker_container:
+        image: presearch/node
+        name: presearch-node
+        restart_policy: unless-stopped
+        volumes:
+          - presearch-node-storage:/app/node
+        env:
+          REGISTRATION_CODE: "{{registration_code}}"
+        tty: yes
+        detach: yes
