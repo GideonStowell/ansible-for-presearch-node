@@ -3,8 +3,11 @@ Ansible playbook to setup presearch node on Ubuntu
 
 
 # Features
-This playbook will install a presearch node onto the target host matching the configuration found on the official [presearch website](https://docs.presearch.org/nodes/setup). Note that you will need to acquire a registration code from presearch.org and stake PRE tokens to earn rewards as a node runner.
+This playbook will install a presearch node onto the target host(s) in **one simple command** matching the configuration found on the official [presearch website](https://docs.presearch.org/nodes/setup). Ansible allows for repeatable deployments and documentation of your deployments.
+
 ![Screenshot](assets/screenshot.png)
+
+**Note** that you will need to acquire a registration code from presearch.org and stake PRE tokens to earn rewards as a node runner.
 
 # Support
 Did you find this playbook helpful?? Consider donating to allow for continued development efforts on this project:
@@ -23,7 +26,8 @@ Did you find this playbook helpful?? Consider donating to allow for continued de
 ### Testing
 Currently, the playbook was tested with the use of Vagrant. Simply run:
 `vagrant up`
-and the playbook will execute once the vm has been provisioned
+and the playbook will execute once the vm has been provisioned.
+
 After modifying the playbook further, run:
 `vagrant provision` 
 to rerun the playbook.
