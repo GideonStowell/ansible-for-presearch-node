@@ -20,7 +20,7 @@ Did you find this playbook helpful?? Consider donating to allow for continued de
 1. [Install ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-specific-operating-systems) on your laptop or workstation
 2. Rename [example-hosts.ini](example-hosts.ini) to hosts.ini and edit to match your deployment
 3. Add your REGISTRATION_CODE into `vars.yml`
-4. Run this command to deploy your node: `ansible-playbook -i hosts playbook.yml`
+4. Run this command to deploy your node: `ansible-playbook -i hosts.ini playbook.yml`
 
 
 ### Testing
