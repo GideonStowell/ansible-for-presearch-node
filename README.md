@@ -21,6 +21,7 @@ Did you find this playbook helpful?? Consider donating to allow for continued de
 2. Rename [example-hosts.ini](example-hosts.ini) to hosts.ini and edit to match your deployment
 3. Add your REGISTRATION_CODE into `vars.yml`
 4. Run this command to deploy your node: `ansible-playbook -i hosts.ini playbook.yml`
+5. Check your work by logging into the host and running `docker logs -f presearch-node`
 
 
 ### Testing
